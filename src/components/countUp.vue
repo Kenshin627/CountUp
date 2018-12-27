@@ -31,6 +31,9 @@ export default {
     this.InitCountUp();
   },
   methods: {
+    /**
+     * TODO: 计时器初始化
+     */
     InitCountUp() {
       this.defaultOpts.startVal = 
         this.opts.startVal || this.defaultOpts.startVal;
