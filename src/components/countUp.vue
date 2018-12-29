@@ -3,9 +3,9 @@
     <div id="countUpEl"></div>
 
     <div class="btn-group" id="btnAction">
-      <button type="button" class="btn btn-success btn-lg" @click="startCount">{{ displayName }}</button>
-      <button type="button" class="btn btn-warning btn-lg" @click="reset">ReSet</button>
-      <button type="button" class="btn btn-info btn-lg" @click="pauseRresume">Pause/Resume</button>
+      <button type="button" class="btn btn-success btn-md" @click="startCount">Start</button>
+      <button type="button" class="btn btn-danger btn-md" @click="reset">ReSet</button>
+      <button type="button" class="btn btn-info btn-md" @click="pauseRresume">Pause/Resume</button>
     </div>
   </div>
 </template>
@@ -22,9 +22,9 @@ export default {
         startVal: 0,
         endVal  : 100,
         decimals: 0,
-        duration: 2
-      },
-      displayName: "start"
+        duration: 2,
+        isLoop:false
+      }
     };
   },
   mounted() {
@@ -52,7 +52,6 @@ export default {
     },
     startCount() {
       this.countUp && this.countUp.start();
-      this.displayName = "stop";
     },
     reset() {
       this.countUp && this.countUp.reset();
